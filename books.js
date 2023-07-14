@@ -46,6 +46,7 @@ class Book {
         this.title = book.title
         this.pages = book.pages
         this.read = book.read
+        this.img = book.img
     }
 }
 
@@ -55,18 +56,39 @@ let initBook1 = new Book(
         title:'Harry Potter',
         pages:200,
         read:false,
+        img:"Images/HP1.jpg"
     }
 )
 let initBook2 = new Book(
     {
-        author:'J K Rowling',
-        title:'Harry Potter 2',
-        pages:300,
-        read:true,
+        author: 'John Doe',
+        title: 'The Adventure Begins',
+        pages: 250,
+        read: false,
+        img:"Images/TAB1.jpg"
     }
 )
+let initBook3 = new Book(
+    {
+        author: 'Jane Smith',
+        title: 'Mystery of the Lost Key',
+        pages: 320,
+        read: true,
+        
+    }
+);
+let initBook4 = new Book(
+    {
+        author: 'Jane Smith',
+        title: 'Mystery of the Lost Key',
+        pages: 320,
+        read: true,
+        
+    }
+);
 
-myLibrary.addBookToLibrary([initBook1,initBook2])
+
+myLibrary.addBookToLibrary([initBook1,initBook2,initBook3,initBook4])
 
 
 export default myLibrary

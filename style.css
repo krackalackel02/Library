@@ -1,0 +1,104 @@
+/* * * * * * * * *\
+ * Theme          *
+\* * * * * * * * */
+:root {
+	--colour-background-body: #acacac;
+	--colour-background-body-transparent: rgba(255, 255, 255, 0.744);
+	--colour-background-box: #ffffff;
+	--colour-dark-1: #373737;
+	--colour-dark-2: #272424;
+	--colour-accent-1: #f01111;
+	--box-shadow: 0.2rem 0.2rem 1rem var(--colour-dark);
+	--border-radius: 1rem;
+	--padding-cards: 1rem;
+	--padding-title: 2rem;
+}
+/* * * * * * * * *\
+ * Base           *
+\* * * * * * * * */
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	appearance: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+html {
+	font-size: 16px;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	user-select: none;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-size: 1rem;
+    color: var(--colour-dark-1);
+	background-color: var(--colour-background-body);
+	position: relative;
+    padding-top: 1rem;
+}
+main * {
+	background-color: var(--colour-background-box);
+}
+/* * * * * * * * *\
+ * Title          *
+\* * * * * * * * */
+.title {
+	text-align: center;
+	padding: var(--padding-title);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	margin: 0 5rem 0;
+    font-weight: 900;
+}
+.title-accent-1{
+    color: var(--colour-dark-2);
+}
+.title-accent-2{
+    color: var(--colour-accent-1);
+}
+/* * * * * * * * *\
+* Library Info    *
+\* * * * * * * * */
+.info-library-wrapper{
+    background-color: transparent;
+    display: flex;
+    justify-content: end;
+    padding: var(--padding-cards);
+}
+.info-library-card {
+    position: relative;
+	width: clamp(15rem, 20vw, 300px);
+	height: auto;
+	padding: var(--padding-cards);
+    border-radius: var(--border-radius);
+}
+.info-library-card-list-item {
+	list-style-type: none;
+}
+.info-library-card-list-item-type {
+	font-weight: 700;
+}
+.info-library-card-list-item-value {
+    font-weight: 500;
+    position: absolute;
+    right: calc(var(--padding-cards)*4);
+    color: var(--colour-accent-1);
+}
+/* * * * * * * * *\
+* Book Grid       *
+\* * * * * * * * */
+.book-grid-wrapper{
+    margin: 0 2rem;
+    padding: var(--padding-title);
+    border-radius: var(--border-radius);
+    background-color: var(--colour-background-body-transparent);
+}
+.subtitle{
+    background-color: transparent;
+}

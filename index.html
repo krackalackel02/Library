@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="script.js" defer type="module"></script>
 </head>
 <body>
-    
+    <main>
+        <h1 class="title">Welcome to <span class="title-accent-1">my</span><span class="title-accent-2">LIBRARY</span>!</h1>
+        <div class="info-library-wrapper">
+            <div class="info-library-card">
+                <ul class="info-library-card-list">
+                    <li class="info-library-card-list-item">
+                        <span class="info-library-card-list-item-type">Book Count: </span><span class="info-library-card-list-item-value" id="bookCount">1</span>
+                    </li>
+                    <li class="info-library-card-list-item">
+                        <span class="info-library-card-list-item-type">Author Count: </span><span class="info-library-card-list-item-value" id="authorCount">1</span>
+                    </li>
+                    <li class="info-library-card-list-item">
+                        <span class="info-library-card-list-item-type">Pages Read: </span><span class="info-library-card-list-item-value" id="pageCount">1</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="book-grid-wrapper">
+            <h2 class="subtitle">Available Books: </h2>
+            <div class="book-grid">
+            
+            </div>
+        </div>
+    </main>
 </body>
 </html>

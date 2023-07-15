@@ -130,39 +130,62 @@ main * {
 .book-card-details-list-item {
 	list-style-type: none;
 }
-.book-card-details-list-item-type,.book-card-details-list-item-value {
-    background-color: transparent;
-
+.book-card-details-list-item-type,
+.book-card-details-list-item-value {
+	background-color: transparent;
 }
-.book-card-details-list-item-type{
-    font-weight: 900;
+.book-card-details-list-item-type {
+	font-weight: 900;
 }
-.book-card-details-list-item-value{
-    color: var(--colour-accent-1);;
-    display: inline-block;
+.book-card-details-list-item-value {
+	color: var(--colour-accent-1);
+	display: inline-block;
 }
-.book-card-details-list {
+.book-card-details {
 	position: absolute;
 	bottom: 1rem;
-    padding: var(--padding-cards);
-    border-radius: var(--border-radius);
-    background-color: transparent;
-    font-family: Courier, monospace;
-    background-color: rgb(248, 240, 182);
-    background: repeating-linear-gradient(
-        rgb(248, 240, 182),
-        rgb(248, 240, 182) 25px,
-        #bbcc9a 26px,
-        #bbcc9a 27px
-    );
-    background-position-y: 35px;
-    max-width: 13rem;
-    
+	padding: calc(var(--padding-cards) * 0.25);
+	border-radius: var(--border-radius);
 }
-.card-text,.card-text *{
-    background-color: transparent;
+.book-card-details-list {
+	padding: var(--padding-cards);
+	border-radius: var(--border-radius);
+	background-color: transparent;
+	font-family: Courier, monospace;
+	background-color: rgb(248, 240, 182);
+	background: repeating-linear-gradient(
+		rgb(248, 240, 182),
+		rgb(248, 240, 182) 25px,
+		#bbcc9a 26px,
+		#bbcc9a 27px
+	);
+	background-position-y: 35px;
+	max-width: 13rem;
+	border: 2px dashed var(--colour-dark-1);
+}
+.card-text,
+.card-text * {
+	background-color: transparent;
 }
 .card-text {
-    font-size: 1rem;
+	font-size: 1rem;
 	line-height: 27px;
+}
+.remove {
+	--_remove-button-size: 50px;
+	position: absolute;
+	right: calc(var(--padding-cards));
+	width: var(--_remove-button-size);
+	height: var(--_remove-button-size);
+	background-color: var(--colour-accent-1);
+	filter: grayscale(0.4);
+	border-radius: calc(var(--border-radius));
+	font-size: 2rem;
+	color: var(--colour-background-box);
+	border: 2px solid var(--colour-dark-2);
+	transition: transform 0.3s;
+}
+.remove:hover {
+	transform: translateY(-0.25rem);
+	filter: grayscale(0);
 }

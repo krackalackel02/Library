@@ -19,16 +19,16 @@ function updateDisplay() {
         bookCardTemplate.innerHTML = `
             <div class="book-card-details">
                 <ul class="book-card-details-list">
-                    <li class="book-card-details-list-item">
+                    <li class="book-card-details-list-item card-text">
                         <span class="book-card-details-list-item-type">Title: </span><span class="book-card-details-list-item-value">${book.title}</span>
                     </li>
-                    <li class="book-card-details-list-item">
+                    <li class="book-card-details-list-item card-text">
                         <span class="book-card-details-list-item-type">Author: </span><span class="book-card-details-list-item-value">${book.author}</span>
                     </li>
-                    <li class="book-card-details-list-item">
+                    <li class="book-card-details-list-item card-text">
                         <span class="book-card-details-list-item-type">Pages: </span><span class="book-card-details-list-item-value">${book.pages}</span>
                     </li>
-                    <li class="book-card-details-list-item">
+                    <li class="book-card-details-list-item card-text">
                         <span class="book-card-details-list-item-type">Read: </span><span class="book-card-details-list-item-value">${book.read ? "Yes" : "No"}</span>
                     </li>
                 </ul>

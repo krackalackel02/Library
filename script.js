@@ -1,5 +1,4 @@
-import myLibrary from "./books.js";
-// ES6 / TypeScript Import
+import myLibrary, { Book } from "./books.js";// ES6 / TypeScript Import
 import ShortUniqueId from 'https://esm.sh/short-unique-id';
 //Instantiate
 const uid = new ShortUniqueId();
@@ -55,7 +54,8 @@ updateDisplay();
 
 function removeBook(e) {
     let book = e.target.closest(".book-card");
-    if (!book) return;
+    let removeButton = e.target.closest("button.remove");
+    if (!removeButton) return;
   
     let indexToRemove = null;
   
@@ -73,3 +73,35 @@ function removeBook(e) {
 }
 
 bookGrid.addEventListener("click",removeBook)
+const Popup = document.querySelector(".popup");
+
+function addBook (e){
+    
+    Popup.classList.toggle("active")
+}
+let addButton = document.querySelector(".add-book")
+addButton.addEventListener("click",addBook)
+
+const formTitle = document.querySelector("input#title");
+const formAuthor = document.querySelector("input#author");
+const formRead = document.querySelector("input#read");
+const formPages = document.querySelector("input#pages");
+formPages.min = 0;
+const formAdd = document.querySelector("form button.submit");
+const Form = document.querySelector("form");
+
+formAdd.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (!Form.checkValidity()) return; // Fix: use Form.checkValidity() instead of Form.valid
+
+    const newbook = new Book({
+        title: formTitle.value,
+        author: formAuthor.value,
+        pages: parseInt(formPages.value), // Convert to a numeric value
+        read: formRead.checked // Use the checked property to get a boolean value
+    });
+
+    myLibrary.addBookToLibrary([newbook]);
+    console.log(myLibrary);
+    updateDisplay();
+});

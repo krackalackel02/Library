@@ -40,7 +40,7 @@ class Library {
 
 let myLibrary = new Library()
 
-class Book {
+export class Book {
     constructor  (book){
         this.author = book.author
         this.title = book.title

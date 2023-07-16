@@ -10,6 +10,7 @@
 	--colour-accent-1: #f01111;
 	--colour-remove: #ff0000;
 	--colour-add: #00ff26;
+	--colour-save: #ff7b00;
 	--box-shadow: 0.2rem 0.2rem 1rem var(--colour-dark-2);
 	--border-radius: 1rem;
 	--padding-cards: 1rem;
@@ -25,8 +26,8 @@
 	border: 0;
 	appearance: none;
 	text-decoration: none;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	box-sizing: border-box;
 }
 html {
@@ -69,28 +70,46 @@ main * {
 	background-color: transparent;
 	display: flex;
 	justify-content: space-around;
-    padding: var(--padding-cards) var(--padding-title);
+	padding: var(--padding-cards) var(--padding-title);
 }
-.add-book{
-    position: relative;
-    width: clamp(10rem, 10vw, 150px);
-    height: auto;
-    padding: var(--padding-cards);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+.add-book {
+	position: relative;
+	width: clamp(10rem, 10vw, 150px);
+	height: auto;
+	padding: var(--padding-cards);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
 	filter: grayscale(0.4);
 	border-radius: calc(var(--border-radius));
-    font-weight: 700;
+	font-weight: 700;
 	font-size: 1.5rem;
 	color: var(--colour-background-box);
 	border: 2px solid var(--colour-dark-2);
-    background-color: var(--colour-add);
+	background-color: var(--colour-add);
 }
 .add-book:hover {
 	transform: translateY(-0.25rem);
 	filter: grayscale(0);
 }
-
+.save-book {
+	position: relative;
+	width: clamp(10rem, 10vw, 150px);
+	height: auto;
+	padding: var(--padding-cards);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	filter: grayscale(0.4);
+	border-radius: calc(var(--border-radius));
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: var(--colour-background-box);
+	border: 2px solid var(--colour-dark-2);
+	background-color: var(--colour-save);
+}
+.save-book:hover {
+	transform: translateY(-0.25rem);
+	filter: grayscale(0);
+}
 
 /* * * * * * * * *\
 * Library Info    *
@@ -214,3 +233,57 @@ main * {
 	transform: translateY(-0.25rem);
 	filter: grayscale(0);
 }
+/* * * * * * * * *\
+* Form		       *
+\* * * * * * * * */
+/* Style the asterisk */
+/* Style the asterisk */
+label.required:before {
+	content: " *";
+	color: red;
+}
+.popup{
+	position: fixed;
+	--_width: clamp(20rem, 40vw, 4000px);
+	--_aspect-ratio: 1.5;
+	--_height: calc(var(--_width) * var(--_aspect-ratio));
+	top: calc((100vh - var(--_height))/2);
+	left: calc((100vw - var(--_width))/2);
+	height: var(--_height);
+	width: var(--_width);
+	padding: var(--padding-cards);
+	border-radius: var(--border-radius);
+	display: none;
+}
+.popup.active{
+	display: block;
+}
+.popup form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	padding: var(--padding-cards);
+}
+.form-item{
+	text-align: center;
+}
+.form-item input[type='text']{
+	width: calc(var(--_width)/3);
+}
+.form-item input[type='checkbox'] {
+	/* Styles for unchecked checkboxes */
+	height: 25px;
+	width: 25px;
+	background-color: #eee;
+	color: var(--colour-dark-2);
+  }
+  
+  .form-item input[type='checkbox']:checked {
+	/* Styles for checked checkboxes */
+	background-color: var(--colour-accent-1);
+	color: #fff; /* You can set the color of the checkmark here */
+  }
+  

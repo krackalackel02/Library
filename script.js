@@ -85,6 +85,7 @@ addButton.addEventListener("click",addBook)
 const formTitle = document.querySelector("input#title");
 const formAuthor = document.querySelector("input#author");
 const formRead = document.querySelector("input#read");
+const formImg = document.querySelector("input#img");
 const formPages = document.querySelector("input#pages");
 formPages.min = 0;
 const formAdd = document.querySelector("form button.submit");
@@ -98,6 +99,7 @@ formAdd.addEventListener("click", (e) => {
         title: formTitle.value,
         author: formAuthor.value,
         pages: parseInt(formPages.value), // Convert to a numeric value
+        img: formImg.value, // Convert to a numeric value
         read: formRead.checked // Use the checked property to get a boolean value
     });
 

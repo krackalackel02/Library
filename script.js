@@ -94,6 +94,8 @@ function addBook(e) {
 }
 let addButton = document.querySelector(".add-book");
 addButton.addEventListener("click", addBook);
+let popupCloseButton = document.querySelector(".popup .remove");
+popupCloseButton.addEventListener("click", addBook);
 
 const formTitle = document.querySelector("input#title");
 const formAuthor = document.querySelector("input#author");
@@ -117,8 +119,8 @@ formAdd.addEventListener("click", (e) => {
 	});
 
 	myLibrary.addBookToLibrary([newbook]);
-	console.log(myLibrary);
 	updateDisplay();
+    addBook()
 });
 
 function saveBook() {

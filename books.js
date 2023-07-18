@@ -64,20 +64,8 @@ let initBook2 = new Book({
 	read: false,
 	img: "Images/TAB1.jpg",
 });
-let initBook3 = new Book({
-	author: "Jane Smith",
-	title: "Mystery of the Lost Key",
-	pages: 320,
-	read: true,
-});
-let initBook4 = new Book({
-	author: "Jane Smith",
-	title: "Mystery of the Lost Key",
-	pages: 320,
-	read: true,
-});
 let storedLib = JSON.parse(localStorage.getItem("myLibrary"));
 let myLibrary = storedLib
 	? new Library(storedLib.list)
-	: new Library([initBook1, initBook2, initBook3, initBook4]);
+	: new Library([initBook1, initBook2]);
 export default myLibrary;

@@ -11,6 +11,8 @@
 	--colour-remove: #ff0000;
 	--colour-add: #00ff26;
 	--colour-save: #ff7b00;
+	--colour-default:rgb(17, 0, 255);
+	--colour-clear:rgb(255, 45, 8);
 	--box-shadow: 0.2rem 0.2rem 1rem var(--colour-dark-2);
 	--border-radius: 1rem;
 	--padding-cards: 1rem;
@@ -109,6 +111,44 @@ main * {
 	background-color: var(--colour-save);
 }
 .save-book:hover {
+	transform: translateY(-0.25rem);
+	filter: grayscale(0);
+}
+.clear-book {
+	position: relative;
+	width: clamp(10rem, 10vw, 150px);
+	height: auto;
+	padding: var(--padding-cards);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	filter: grayscale(0.4);
+	border-radius: calc(var(--border-radius));
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: var(--colour-background-box);
+	border: 2px solid var(--colour-dark-2);
+	background-color: var(--colour-clear);
+}
+.clear-book:hover {
+	transform: translateY(-0.25rem);
+	filter: grayscale(0);
+}
+.default-book {
+	position: relative;
+	width: clamp(10rem, 10vw, 150px);
+	height: auto;
+	padding: var(--padding-cards);
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+	filter: grayscale(0.4);
+	border-radius: calc(var(--border-radius));
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: var(--colour-background-box);
+	border: 2px solid var(--colour-dark-2);
+	background-color: var(--colour-default);
+}
+.default-book:hover {
 	transform: translateY(-0.25rem);
 	filter: grayscale(0);
 }

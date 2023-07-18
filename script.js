@@ -129,3 +129,32 @@ function saveBook() {
 
 let saveButton = document.querySelector(".save-book");
 saveButton.addEventListener("click", saveBook);
+
+function clearBook() {
+	myLibrary.list = [];
+    updateDisplay()
+}
+let clearButton = document.querySelector(".clear-book");
+clearButton.addEventListener("click", clearBook);
+
+function defaultBook() {
+    let initBook1 = new Book({
+        author: "J K Rowling",
+        title: "Harry Potter",
+        pages: 200,
+        read: false,
+        img: "Images/HP1.jpg",
+    });
+    let initBook2 = new Book({
+        author: "John Doe",
+        title: "The Adventure Begins",
+        pages: 250,
+        read: false,
+        img: "Images/TAB1.jpg",
+    });
+    myLibrary.addBookToLibrary([initBook1, initBook2]);
+    
+    updateDisplay()
+}
+let defaultButton = document.querySelector(".default-book");
+defaultButton.addEventListener("click", defaultBook);

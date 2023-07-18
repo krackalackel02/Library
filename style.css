@@ -54,7 +54,7 @@ main * {
 	padding: var(--padding-title) 0;
 	border-radius: var(--border-radius);
 	box-shadow: var(--box-shadow);
-	margin: 0 max(15rem, 25vw) 0;
+	/* margin: 0 max(15rem, 25vw) 0; */
 	font-weight: 900;
 }
 .title-accent-1 {
@@ -69,6 +69,8 @@ main * {
 .button-library-wrapper {
 	background-color: transparent;
 	display: flex;
+	flex-wrap: wrap-reverse;
+	gap: var(--padding-cards);
 	justify-content: space-around;
 	padding: var(--padding-cards) var(--padding-title);
 }

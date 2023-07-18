@@ -290,7 +290,7 @@ label.required:before {
 .popup {
 	--_remove-button-size: 50px;
 	position: fixed;
-	--_width: clamp(20rem, 40vw, 4000px);
+	--_width: clamp(20rem, 40vw, 400px);
 	--_aspect-ratio: 1.5;
 	--_height: calc(var(--_width) * var(--_aspect-ratio));
 	top: calc((100vh - var(--_height)) / 2);

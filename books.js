@@ -76,10 +76,8 @@ let initBook4 = new Book({
 	pages: 320,
 	read: true,
 });
-
-let myLibrary =
-    
-	new Library(JSON.parse(localStorage.getItem("myLibrary")).list) 
-    ||
-	new Library([initBook1, initBook2, initBook3, initBook4]);
+let storedLib = JSON.parse(localStorage.getItem("myLibrary"));
+let myLibrary = storedLib
+	? new Library(storedLib.list)
+	: new Library([initBook1, initBook2, initBook3, initBook4]);
 export default myLibrary;

@@ -11,8 +11,8 @@
 	--colour-remove: #ff0000;
 	--colour-add: #00ff26;
 	--colour-save: #ff7b00;
-	--colour-default:rgb(17, 0, 255);
-	--colour-clear:rgb(255, 45, 8);
+	--colour-default: rgb(17, 0, 255);
+	--colour-clear: rgb(255, 45, 8);
 	--box-shadow: 0.2rem 0.2rem 1rem var(--colour-dark-2);
 	--border-radius: 1rem;
 	--padding-cards: 1rem;
@@ -209,6 +209,9 @@ main * {
 	outline: 1px solid #ffffff;
 	position: relative;
 }
+.book-card.editing {
+	scale: 1.05;
+}
 .book-card:hover {
 	transition: scale 0.3s;
 	scale: 1.05;
@@ -321,14 +324,14 @@ label.required:before {
 	/* text-align: center; */
 	flex-direction: row;
 }
-input[type='checkbox']{
+input[type="checkbox"] {
 	background-color: initial;
-    cursor: default;
-    appearance: auto;
-    box-sizing: border-box;
-    margin: 3px 3px 3px 4px;
-    padding: initial;
-    border: initial;
+	cursor: default;
+	appearance: auto;
+	box-sizing: border-box;
+	margin: 3px 3px 3px 4px;
+	padding: initial;
+	border: initial;
 	display: block;
 	opacity: 1;
 }
@@ -340,6 +343,3 @@ input[type='checkbox']{
 	position: relative;
 	margin-inline: auto;
 }
-
-
-
